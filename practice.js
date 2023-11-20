@@ -55,12 +55,14 @@ function findOddsum(number) {
   let sum = 0;
   for (let i = 0; i < number.length; i++) {
     if (number[i] % 2 !== 0) {
+      sum = sum + number[i];
       console.log(i, number[i]);
-      sum = sum + i;
     }
   }
   return sum;
 }
-
-const myNumber = [41, 7486, 7486, 3464, 87, 348, 1];
+const myNumber = [41, 75, 26, 34, 87, 38, 61];
 const result = findOddsum(myNumber);
+console.log(result);
+
+
