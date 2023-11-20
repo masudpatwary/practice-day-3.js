@@ -31,10 +31,36 @@
 //   a += 1;
 // }
 
-for (i = 1; i < 20; i++) {
-  if (i % 2 == 0) {
-    console.log(i, ": this is even loop");
-  } else {
-    console.log(i, ": this is odd loop");
+// for (i = 1; i < 20; i++) {
+//   if (i % 2 == 0) {
+//     console.log(i, ": this is even loop");
+//   } else {
+//     console.log(i, ": this is odd loop");
+//   }
+// }
+
+// for each
+
+// const number = [45, 46, 64, 664, 688, 54];
+// number.forEach(myFunction);
+// function myFunction(value) {
+//   if (value % 2 == 0) {
+//     console.log(value, "is even number");
+//   } else {
+//     console.log(value, "is odd number");
+//   }
+// }
+
+function findOddsum(number) {
+  let sum = 0;
+  for (let i = 0; i < number.length; i++) {
+    if (number[i] % 2 !== 0) {
+      console.log(i, number[i]);
+      sum = sum + i;
+    }
   }
+  return sum;
 }
+
+const myNumber = [41, 7486, 7486, 3464, 87, 348, 1];
+const result = findOddsum(myNumber);
